@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>足镜 · 镜像热场海报</title>
+<style>
+  :root{ --navy:#0E2233; --orange:#E4572E; --paper:#F6F2EA; --slate:#9fb1bb; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:#11171c;display:flex;justify-content:center;padding:32px;
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;}
+  .poster{
+    width:1080px;height:1440px;position:relative;overflow:hidden;
+    box-shadow:0 24px 70px rgba(0,0,0,.5);
+  }
+  .poster .bg{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;
+    display:block;
+  }
+  /* left scrim for text readability, right side keeps the thermal field visible */
+  .scrim{position:absolute;inset:0;
+    background:linear-gradient(to right,
+      rgba(14,34,51,.94) 0%, rgba(14,34,51,.82) 26%, rgba(14,34,51,.35) 48%, rgba(14,34,51,0) 62%);}
+  .content{position:absolute;inset:0;padding:64px 60px;display:flex;flex-direction:column;}
+  .kicker{font-size:15px;letter-spacing:7px;color:var(--slate);text-transform:uppercase;font-weight:600;}
+  h1{font-family:"Songti SC","STSong","SimSun",serif;font-size:172px;line-height:.92;
+    color:#fff;letter-spacing:14px;margin-top:18px;text-indent:14px;}
+  .sub{margin-top:18px;font-size:30px;color:var(--orange);letter-spacing:3px;font-weight:600;}
+  .lead{margin-top:30px;font-size:23px;line-height:1.7;color:#e7edf1;max-width:640px;font-weight:300;}
+  .turn{margin-top:18px;font-size:21px;line-height:1.7;color:#cdd8df;max-width:640px;font-weight:300;}
+  .turn b{color:var(--orange);font-weight:600;}
+  .spacer{flex:1;}
+
+  /* bottom data bar covers generator watermark */
+  .bar{position:absolute;left:0;right:0;bottom:0;
+    background:linear-gradient(to top, rgba(14,34,51,.96), rgba(14,34,51,.96) 70%, transparent);
+    padding:30px 60px 36px;display:flex;gap:14px;align-items:flex-end;}
+  .chip{flex:1;background:rgba(246,242,234,.06);border:1px solid rgba(228,87,46,.5);
+    border-radius:6px;padding:16px 14px;text-align:center;}
+  .chip b{display:block;font-size:34px;color:var(--orange);
+    font-family:"Bebas Neue","DIN Alternate",sans-serif;letter-spacing:1px;}
+  .chip span{display:block;font-size:13px;color:#bcc9d1;margin-top:7px;letter-spacing:1px;}
+  .foot{position:absolute;left:60px;bottom:206px;font-family:"Songti SC","STSong",serif;
+    font-size:25px;letter-spacing:3px;color:#fff;}
+  .foot .hot{color:var(--orange);}
+</style>
+</head>
+<body>
+  <div class="poster">
+    <img class="bg" src="abstract_perfectly_mirrored_th_2026-10-31T10-42-32.png" alt="镜像热场主视觉" />
+    <div class="scrim"></div>
+    <div class="content">
+      <div class="kicker">Mirror-Foot · 糖尿病早筛</div>
+      <h1>足镜</h1>
+      <div class="sub">把糖尿病的"火"，提前两周看见</div>
+      <p class="lead">中国 <b style="color:#fff;font-weight:600">1.4 亿</b> 糖尿病人，每 <b style="color:#fff;font-weight:600">3</b> 人就有 <b style="color:#fff;font-weight:600">1</b> 人，一生会被糖尿病足找上门。</p>
+      <p class="turn">但溃烂之前约 <b>两周</b>，脚已经在悄悄"发热"——炎症，比破溃来得更早。<br/>足镜：千元级热像仪 + 镜像温差算法，让社区护士 <b>30 秒</b> 看出"哪只脚在发炎"。</p>
+      <div class="spacer"></div>
+    </div>
+    <div class="foot">让两只脚，<span class="hot">互当镜子</span></div>
+    <div class="bar">
+      <div class="chip"><b>1.4亿</b><span>糖尿病患者（中国）</span></div>
+      <div class="chip"><b>19.03%</b><span>糖尿病足总截肢率</span></div>
+      <div class="chip"><b>30秒</b><span>护士完成筛查</span></div>
+      <div class="chip"><b>≥75%</b><span>目标特异性</span></div>
+    </div>
+  </div>
+</body>
+</html>
